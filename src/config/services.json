@@ -1,0 +1,183 @@
+[
+  {
+    "type": "table",
+    "title": "Монтаж Кабеля",
+    "columns": [
+      {
+        "type": "text",
+        "align": "left",
+        "title": "Сечение кабеля"
+      },
+      {
+        "type": "currency",
+        "align": "left",
+        "title": "Открытой проводкой"
+      },
+      {
+        "type": "currency",
+        "align": "right",
+        "title": "В гофро"
+      }
+    ],
+    "data": [
+      [
+        "до 4 мм^2",
+        {
+          "currency": "UAH",
+          "plus": true,
+          "value": 20
+        },
+        {
+          "currency": "UAH",
+          "plus": true,
+          "value": 30
+        }
+      ],
+      [
+        "4-10 мм^2",
+        {
+          "currency": "UAH",
+          "plus": true,
+          "value": 30
+        },
+        {
+          "currency": "UAH",
+          "plus": true,
+          "value": 40
+        }
+      ],
+      [
+        "больше 10 мм^2",
+        {
+          "currency": "UAH",
+          "plus": true,
+          "value": 40
+        },
+        null
+      ]
+    ]
+  },
+  {
+    "type": "table",
+    "title": "Штробление Стены",
+    "columns": [
+      {
+        "type": "text",
+        "align": "left",
+        "title": "Материал стены"
+      },
+      {
+        "type": "currency",
+        "align": "left",
+        "title": "Вертикально"
+      },
+      {
+        "type": "currency",
+        "align": "right",
+        "title": "Горизонт."
+      }
+    ],
+    "data": [
+      [
+        "Бетон",
+        {
+          "currency": "UAH",
+          "plus": true,
+          "value": 80
+        },
+        {
+          "currency": "UAH",
+          "plus": true,
+          "value": 120
+        }
+      ],
+      [
+        "Кирпич",
+        {
+          "currency": "UAH",
+          "plus": true,
+          "value": 50
+        },
+        {
+          "currency": "UAH",
+          "plus": true,
+          "value": 75
+        }
+      ],
+      [
+        "Газоблок",
+        {
+          "currency": "UAH",
+          "plus": true,
+          "value": 40
+        },
+        {
+          "currency": "UAH",
+          "plus": true,
+          "value": 40
+        }
+      ],
+      [
+        "Гипсокартон",
+        {
+          "currency": "UAH",
+          "plus": true,
+          "value": 30
+        },
+        {
+          "currency": "UAH",
+          "plus": true,
+          "value": 30
+        }
+      ]
+    ]
+  },
+  {
+    "type": "table",
+    "title": "Вырезка отверстия и установка распредкоробки, подрозетника",
+    "columns": [
+      {
+        "type": "text",
+        "align": "left"
+      },
+      {
+        "type": "currency",
+        "align": "right"
+      }
+    ],
+    "data": [
+      [
+        "в бетоне",
+        {
+          "currency": "UAH",
+          "plus": true,
+          "value": 120
+        }
+      ],
+      [
+        "В кирпиче",
+        {
+          "currency": "UAH",
+          "plus": true,
+          "value": 90
+        }
+      ],
+      [
+        "В гипсокартоне",
+        {
+          "currency": "UAH",
+          "plus": true,
+          "value": 70
+        }
+      ],
+      [
+        "Сверление сквозных отверстий в кирпиче/бетоне",
+        {
+          "currency": "UAH",
+          "plus": true,
+          "value": 60
+        }
+      ]
+    ]
+  }
+]

@@ -1,0 +1,128 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  @media (min-width: 850px) {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+
+.header {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 28px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  @media (min-width: 850px) {
+    margin-right: 45px;
+    flex-grow: 1;
+  }
+}
+
+.table {
+  @media (min-width: 850px) {
+    max-width: 460px;
+    flex-grow: 0;
+    flex-basis: 460px;
+    flex-shrink: 0;
+  }
+}
+
+.columnHeaders {
+  display: flex;
+  gap: 5px;
+  @media (min-width: 850px) {
+    gap: 25px;
+  }
+}
+
+.columnHeader {
+  display: flex;
+  flex-grow: 1;
+  flex-basis: 0;
+  &.right {
+    justify-content: flex-end;
+  }
+  &.left {
+    justify-content: flex-start;
+  }
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 19px;
+  margin-bottom: 0.5em;
+}
+
+.row {
+  display: flex;
+  width: 100%;
+  padding: 9px 0;
+  &:not(:last-child) {
+    border-bottom: 1px solid #676767;
+  }
+  gap: 5px;
+  @media (min-width: 850px) {
+    gap: 25px;
+  }
+}
+
+.cell {
+  flex-grow: 1;
+  flex-basis: 0;
+  display: flex;
+  &.right {
+    justify-content: flex-end;
+  }
+  &.middle {
+    justify-content: center;
+  }
+  &.left {
+    justify-content: flex-start;
+  }
+}
+
+.plus {
+  border: none;
+  background: none;
+  outline: none;
+  color: #fff;
+  padding: 0;
+  display: flex;
+  position: relative;
+  &:hover .popover {
+    display: block;
+  }
+}
+
+.popover {
+  display: none;
+  z-index: 1;
+  position: absolute;
+  width: 249px;
+  padding: 17px 10px;
+  border-radius: 10px;
+  background: rgb(87, 87, 87);
+  transform: translate3d(-50%, calc(-30px - 100%), 0);
+
+  .text {
+    font-size: 16px;
+    text-align: left;
+    line-height: 19px;
+    margin-bottom: 19px;
+  }
+  .triangle {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+  }
+  .circle {
+    position: absolute;
+    top: calc(100% + 17px);
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+  }
+}
