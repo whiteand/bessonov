@@ -30,7 +30,7 @@ function Plus(): JSX.Element {
       <div class={s.popover}>
         <div class={s.text}>Со значком «+» указана минимальная стоимость</div>
         <ContactButtonLink preset="small">Узнать точную цену</ContactButtonLink>
-        <img class={s.triangle} src={triangle} />
+        <img width="20" class={s.triangle} src={triangle} />
         <img class={s.circle} src={circle} />
       </div>
     </button>

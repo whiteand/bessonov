@@ -48,7 +48,7 @@ export default function ContactButtonLink(props: {
       }}
       href={`tel:${contacts.phone}`}
     >
-      <img src={phone} classList={{ [s.dark]: isDark() }} />
+      <img src={phone} classList={{ [s.dark]: isDark() }} width="29" height="35" />
       <div>{text}</div>
     </a>
   );
