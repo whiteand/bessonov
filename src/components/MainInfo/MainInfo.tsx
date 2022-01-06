@@ -25,7 +25,7 @@ export default function MainInfo() {
   });
   return (
     <header class={s.wrapper}>
-      <img class={s.image} src={png} width="100px" />
+      <img class={s.image} src={png} width="100px" height="100px" />
       <div>
         <h1>
           <span class={s.electro}>Електрик</span>
