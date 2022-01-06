@@ -26,23 +26,25 @@ export default function MainInfo() {
   return (
     <header class={s.wrapper}>
       <img class={s.image} src={png} width="100px" />
-      <h1>
-        <span class={s.electro}>Електрик</span>
-        <span class={s.name}>Влад Бессонов</span>
-      </h1>
-      <nav class={s.nav}>
-        <For each={navLinks}>
-          {(navLink) => (
-            <a
-              class={s.navlink}
-              classList={{ [s.visible]: navLink.visible() }}
-              href={`/#${navLink.headerId}`}
-            >
-              {navLink.text}
-            </a>
-          )}
-        </For>
-      </nav>
+      <div>
+        <h1>
+          <span class={s.electro}>Електрик</span>
+          <span class={s.name}>Влад Бессонов</span>
+        </h1>
+        <nav class={s.nav}>
+          <For each={navLinks}>
+            {(navLink) => (
+              <a
+                class={s.navlink}
+                classList={{ [s.visible]: navLink.visible() }}
+                href={`/#${navLink.headerId}`}
+              >
+                {navLink.text}
+              </a>
+            )}
+          </For>
+        </nav>
+      </div>
     </header>
   );
 }
