@@ -57,7 +57,7 @@ export function Row(props: IRowProps): JSX.Element {
     mergeSameCells(res);
     return res;
   });
-  console.log(cells());
+
   return (
     <div class={s.row}>
       <For each={cells()}>{(cell) => <Cell {...cell} />}</For>
