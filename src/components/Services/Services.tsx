@@ -14,6 +14,7 @@ export default function Services() {
             <Match when={service.type === "table"}>
               <div class={s.tableWrapper}>
                 <Table
+                  titleId={service.titleId}
                   title={service.title}
                   columns={service.columns as TColumn[]}
                   data={service.data as TData[]}

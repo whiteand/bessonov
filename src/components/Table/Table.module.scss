@@ -83,13 +83,14 @@
 }
 
 .plus {
-  border: none;
-  background: none;
-  outline: none;
-  color: #fff;
-  padding: 0;
   display: flex;
   position: relative;
+  align-items: center;
+  padding: 0;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: none;
   &:hover .popover {
     display: block;
   }
@@ -102,6 +103,8 @@
   width: 249px;
   padding: 17px 10px;
   border-radius: 10px;
+  top: 0;
+  left: 50%;
   background: rgb(87, 87, 87);
   transform: translate3d(-50%, calc(-30px - 100%), 0);
 
@@ -125,4 +128,8 @@
     transform: translateX(-50%);
     position: absolute;
   }
+}
+
+.currency {
+  font-family: "Roboto Mono", "Roboto", monospace;
 }

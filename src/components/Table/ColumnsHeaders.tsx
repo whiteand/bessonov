@@ -4,7 +4,7 @@ import s from "./Table.module.scss";
 import ColumnHeader from "./ColumnHeader";
 
 interface ITableHeaderProps {
-  columns: TColumn[];
+  columns: readonly TColumn[];
 }
 export function ColumnsHeaders(props: ITableHeaderProps): JSX.Element {
   return (

@@ -1,10 +1,14 @@
 .wrapper {
   display: flex;
-  justify-content: center;
   position: fixed;
   bottom: 20px;
-  width: 100%;
-  left: 0;
+  left: 50%;
+  justify-content: center;
+  width: 303px;
   background: rgba(49, 49, 49, 1);
   box-shadow: 0 0 10px rgba(49, 49, 49, 1);
+  transform: translateX(-50%);
+  @media (min-width: 850px) {
+    display: none;
+  }
 }

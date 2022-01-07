@@ -5,8 +5,8 @@ import { TColumn, ICurrencyValue } from "./types";
 import s from "./Table.module.scss";
 
 interface IRowProps {
-  columns: TColumn[];
-  data: (string | ICurrencyValue)[];
+  columns: readonly TColumn[];
+  data: readonly (string | ICurrencyValue)[];
   index: Accessor<number>;
 }
 

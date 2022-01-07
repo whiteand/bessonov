@@ -2,6 +2,8 @@
   {
     "type": "table",
     "title": "Монтаж Кабеля",
+    "titleId": "montazh-kabelia",
+    "navlinkText": "Монтаж кабеля",
     "columns": [
       {
         "type": "text",
@@ -60,6 +62,7 @@
   {
     "type": "table",
     "title": "Штробление Стены",
+    "titleId": "shtroblenie-steny",
     "columns": [
       {
         "type": "text",
@@ -134,7 +137,9 @@
   },
   {
     "type": "table",
-    "title": "Вырезка отверстия и установка распредкоробки, подрозетника",
+    "title": "Вырезка отверстия и установка распредкоробки, подрозетника",
+    "titleId": "vyrezka-otverstiia-i-ustanovka-raspredkorobki-podrozetnika",
+    "navlinkText": "Устанавливаю подрозетники и распредкоробки, собираю их.",
     "columns": [
       {
         "type": "text",
@@ -179,5 +184,581 @@
         }
       ]
     ]
+  },
+  {
+    "type": "table",
+    "title": "Електрощиток внутренний / врезной",
+    "navlinkText": "Собираю електрощиток, устанавливаю розетки, выключатели, светильники.",
+    "columns": [
+      {
+        "type": "text",
+        "align": "left",
+        "title": ""
+      },
+      {
+        "type": "currency",
+        "align": "right",
+        "title": ""
+      }
+    ],
+    "data": [
+      [
+        "на 1-4 модуля",
+        {
+          "currency": "UAH",
+          "value": 200,
+          "plus": false
+        }
+      ],
+      [
+        "на 5-12",
+        {
+          "currency": "UAH",
+          "value": 270,
+          "plus": false
+        }
+      ],
+      [
+        "на 13-24",
+        {
+          "currency": "UAH",
+          "value": 350,
+          "plus": false
+        }
+      ],
+      [
+        "больше 48",
+        {
+          "currency": "UAH",
+          "value": 600,
+          "plus": true
+        }
+      ]
+    ],
+    "titleId": "elektroshchitok-vnutrennii-vreznoi"
+  },
+  {
+    "type": "table",
+    "title": "Устройство ниши",
+    "columns": [
+      {
+        "type": "text",
+        "align": "left",
+        "title": ""
+      },
+      {
+        "type": "currency",
+        "align": "right",
+        "title": ""
+      }
+    ],
+    "data": [
+      [
+        "в кирпиче",
+        {
+          "currency": "UAH",
+          "value": 400,
+          "plus": true
+        }
+      ],
+      [
+        "в бетоне",
+        {
+          "currency": "UAH",
+          "value": 650,
+          "plus": true
+        }
+      ]
+    ],
+    "titleId": "ustroistvo-nishi"
+  },
+  {
+    "type": "table",
+    "title": "Щиток внешний / накладной",
+    "columns": [
+      {
+        "type": "text",
+        "align": "left",
+        "title": ""
+      },
+      {
+        "type": "currency",
+        "align": "right",
+        "title": ""
+      }
+    ],
+    "data": [
+      [
+        "1-фазный счётчик",
+        {
+          "currency": "UAH",
+          "value": 250,
+          "plus": true
+        }
+      ],
+      [
+        "3-фазный",
+        {
+          "currency": "UAH",
+          "value": 350,
+          "plus": true
+        }
+      ],
+      [
+        "1-фазный автомат",
+        {
+          "currency": "UAH",
+          "value": 70,
+          "plus": true
+        }
+      ],
+      [
+        "силовой выключатель УЗО",
+        {
+          "currency": "UAH",
+          "value": 150,
+          "plus": true
+        }
+      ]
+    ],
+    "titleId": "shchitok-vneshnii-nakladnoi"
+  },
+  {
+    "type": "table",
+    "title": "Сборка распредкоробки",
+    "columns": [
+      {
+        "type": "text",
+        "align": "left",
+        "title": ""
+      },
+      {
+        "type": "currency",
+        "align": "right",
+        "title": ""
+      }
+    ],
+    "data": [
+      [
+        "распайка проводов, или соединение на зажимы WAGO",
+        {
+          "currency": "UAH",
+          "value": 120,
+          "plus": true
+        }
+      ]
+    ],
+    "titleId": "sborka-raspredkorobki"
+  },
+  {
+    "type": "table",
+    "title": "Монтаж и подключение светильников",
+    "columns": [
+      {
+        "type": "text",
+        "align": "left",
+        "title": ""
+      },
+      {
+        "type": "currency",
+        "align": "right",
+        "title": ""
+      }
+    ],
+    "data": [
+      [
+        "в потолок «Армстронг» или «Грильято»",
+        {
+          "currency": "UAH",
+          "value": 140,
+          "plus": true
+        }
+      ],
+      [
+        "настенный (бра)",
+        {
+          "currency": "UAH",
+          "value": 140,
+          "plus": true
+        }
+      ],
+      [
+        "точечный  (без трансформатора)",
+        {
+          "currency": "UAH",
+          "value": 80,
+          "plus": true
+        }
+      ],
+      [
+        "светодиодный",
+        {
+          "currency": "UAH",
+          "value": 120,
+          "plus": true
+        }
+      ],
+      [
+        "ландшафтный в грунт",
+        {
+          "currency": "UAH",
+          "value": 200,
+          "plus": true
+        }
+      ],
+      [
+        "в ступени бетонные",
+        {
+          "currency": "UAH",
+          "value": 220,
+          "plus": true
+        }
+      ],
+      [
+        "подводный",
+        {
+          "currency": "UAH",
+          "value": 240,
+          "plus": true
+        }
+      ],
+      [
+        "прожектор для подсветки здания",
+        {
+          "currency": "UAH",
+          "value": 100,
+          "plus": true
+        }
+      ]
+    ],
+    "titleId": "montazh-i-podkluchenie-svetilnikov"
+  },
+  {
+    "type": "table",
+    "title": "Поиск повреждений электропроводки, кабеля",
+    "columns": [
+      {
+        "type": "text",
+        "align": "left",
+        "title": ""
+      },
+      {
+        "type": "currency",
+        "align": "right",
+        "title": ""
+      }
+    ],
+    "data": [
+      [
+        "прозвонка",
+        {
+          "currency": "UAH",
+          "value": 50,
+          "plus": false
+        }
+      ],
+      [
+        "диагностика средней сложности",
+        {
+          "currency": "UAH",
+          "value": 200,
+          "plus": true
+        }
+      ],
+      [
+        "высокой сложности (до 3ч.)",
+        {
+          "currency": "UAH",
+          "value": 300,
+          "plus": true
+        }
+      ],
+      [
+        "Вызов на 3 часа +",
+        {
+          "currency": "UAH",
+          "value": 120,
+          "plus": true
+        }
+      ]
+    ],
+    "titleId": "poisk-povrezhdenii-elektroprovodki-kabelia"
+  },
+  {
+    "type": "table",
+    "title": "Устройство контура заземления",
+    "columns": [
+      {
+        "type": "text",
+        "align": "left",
+        "title": ""
+      },
+      {
+        "type": "currency",
+        "align": "right",
+        "title": ""
+      }
+    ],
+    "data": [
+      [
+        "Комплекс работ",
+        {
+          "currency": "UAH",
+          "value": 3500,
+          "plus": false
+        }
+      ]
+    ],
+    "titleId": "ustroistvo-kontura-zazemleniia"
+  },
+  {
+    "type": "table",
+    "title": "Демонтаж",
+    "columns": [
+      {
+        "type": "text",
+        "align": "left",
+        "title": ""
+      },
+      {
+        "type": "currency",
+        "align": "right",
+        "title": ""
+      }
+    ],
+    "data": [
+      [
+        "Открытой электропроводки",
+        {
+          "currency": "UAH",
+          "value": 10,
+          "plus": false
+        }
+      ],
+      [
+        "Розеток, выключателей, светильников",
+        {
+          "currency": "UAH",
+          "value": 25,
+          "plus": false
+        }
+      ],
+      [
+        "Силового кабеля",
+        {
+          "currency": "UAH",
+          "value": 15,
+          "plus": false
+        }
+      ]
+    ],
+    "titleId": "demontazh"
+  },
+  {
+    "type": "table",
+    "title": "Монтаж",
+    "columns": [
+      {
+        "type": "text",
+        "align": "left",
+        "title": ""
+      },
+      {
+        "type": "currency",
+        "align": "right",
+        "title": ""
+      }
+    ],
+    "data": [
+      [
+        "кнопка звонка",
+        {
+          "currency": "UAH",
+          "value": 100,
+          "plus": false
+        }
+      ],
+      [
+        "полотенцесушитель электрический",
+        {
+          "currency": "UAH",
+          "value": 350,
+          "plus": false
+        }
+      ],
+      [
+        "розетки и выключатели",
+        {
+          "currency": "UAH",
+          "value": 50,
+          "plus": true
+        }
+      ],
+      [
+        "розетки СКС",
+        {
+          "currency": "UAH",
+          "value": 140,
+          "plus": true
+        }
+      ],
+      [
+        "различные датчики, слаботочка",
+        {
+          "currency": "UAH",
+          "value": 150,
+          "plus": true
+        }
+      ],
+      [
+        "стабилизатор напряжения",
+        {
+          "currency": "UAH",
+          "value": 450,
+          "plus": true
+        }
+      ],
+      [
+        "установка люстры",
+        {
+          "currency": "UAH",
+          "value": 240,
+          "plus": true
+        }
+      ],
+      [
+        "устройство теплого пола",
+        {
+          "currency": "UAH",
+          "value": 170,
+          "plus": true
+        }
+      ],
+      [
+        "Установка, подключение термодатчика теплого пола",
+        {
+          "currency": "UAH",
+          "value": 170,
+          "plus": true
+        }
+      ]
+    ],
+    "titleId": "montazh"
+  },
+  {
+    "type": "table",
+    "title": "Консультации",
+    "columns": [
+      {
+        "type": "text",
+        "align": "left",
+        "title": ""
+      },
+      {
+        "type": "text",
+        "align": "right",
+        "title": ""
+      }
+    ],
+    "data": [
+      [
+        "отдельная или предварительная",
+        "250 ₴"
+      ],
+      [
+        "при выполнение работ",
+        "бесплатно"
+      ]
+    ],
+    "titleId": "konsultatsii"
+  },
+  {
+    "type": "table",
+    "title": "Составление сметы работ и материалов",
+    "columns": [
+      {
+        "type": "text",
+        "align": "left",
+        "title": ""
+      },
+      {
+        "type": "currency",
+        "align": "right",
+        "title": ""
+      }
+    ],
+    "data": [
+      [
+        "Смета",
+        {
+          "currency": "UAH",
+          "value": 400,
+          "plus": false
+        }
+      ]
+    ],
+    "titleId": "sostavlenie-smety-rabot-i-materialov"
+  },
+  {
+    "type": "table",
+    "title": "Закупка материалов",
+    "columns": [
+      {
+        "type": "text",
+        "align": "left",
+        "title": ""
+      },
+      {
+        "type": "text",
+        "align": "right",
+        "title": ""
+      }
+    ],
+    "data": [
+      [
+        "самостоятельный выезд",
+        "150 ₴"
+      ],
+      [
+        "с клиентом",
+        "150 ₴ / час"
+      ]
+    ],
+    "titleId": "zakupka-materialov"
+  },
+  {
+    "type": "table",
+    "title": "Коефициент сложности",
+    "columns": [
+      {
+        "type": "text",
+        "align": "left",
+        "title": ""
+      },
+      {
+        "type": "text",
+        "align": "right",
+        "title": ""
+      }
+    ],
+    "data": [
+      [
+        "при работе в стесненных условиях или с дорогими материалами",
+        "х 1,5"
+      ],
+      [
+        "при работе на высоте 2,5– 3,5 м",
+        "х 1,5"
+      ],
+      [
+        "на высоте 3,5–5 м",
+        "х 2,5"
+      ],
+      [
+        "при работе в очень сложных условиях",
+        "х 2,5"
+      ]
+    ],
+    "titleId": "koefitsient-slozhnosti"
   }
 ]

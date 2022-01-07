@@ -2,6 +2,12 @@
   padding: 36px 30px 120px;
   max-width: 850px;
   margin: 0 auto;
+  h2 {
+    text-align: center;
+    @media (min-width: 850px) {
+      text-align: left;
+    }
+  }
 }
 
 .tableWrapper {

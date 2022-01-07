@@ -1,17 +1,17 @@
-import type { Component } from "solid-js";
-import ContactButtonLink from "./components/ContactButtonLink/ContactButtonLink";
-import ContactButtonLinkMobileWrapper from "./components/ContactButtonLinkMobileWrapper/ContactButtonLinkMobileWrapper";
-import MainInfo from "./components/MainInfo";
-import Services from "./components/Services/Services";
+import { Route, Routes } from "solid-app-router";
+import { Component, lazy } from "solid-js";
+
+const Homepage = lazy(() => import("./pages/Homepage"));
+const CreateTable = lazy(() => import("./pages/CreateTable"));
 
 const App: Component = () => {
   return (
     <>
-      <MainInfo />
-      <Services />
-      <ContactButtonLinkMobileWrapper>
-        <ContactButtonLink />
-      </ContactButtonLinkMobileWrapper>
+      <Routes>
+        <Route path="/create-table" element={<CreateTable />} />
+        <Route path="/" element={<Homepage />} />
+        <Route path="/:all" element={<Homepage />} />
+      </Routes>
     </>
   );
 };
