@@ -25,8 +25,10 @@ export function CurrencyCell(
         [s.middle]: props.align === "middle",
       }}
     >
-      {props.value}
-      {CURRENCY_LABEL[props.currency]}
+      <div>
+        {props.value}
+        {CURRENCY_LABEL[props.currency]}
+      </div>
       <Show when={props.plus}>
         <Plus />
       </Show>
