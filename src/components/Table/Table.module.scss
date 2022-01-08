@@ -101,16 +101,33 @@
 }
 
 .popover {
-  display: none;
-  z-index: 1;
-  position: absolute;
   width: 249px;
   padding: 17px 10px;
   border-radius: 10px;
-  top: 0;
-  left: 50%;
   background: rgb(87, 87, 87);
-  transform: translate3d(-50%, calc(-30px - 100%), 0);
+  display: none;
+  &[data-show='true'] {
+    display: block;
+  }
+
+  &[data-popper-placement^="top-start"] {
+    border-bottom-left-radius: 0;
+    .triangle {
+      transform: translate(-4px, 17px);
+    }
+    .circle {
+      transform: translate(-14px, 30px);
+    }
+  }
+  &[data-popper-placement^="top-end"] {
+    border-bottom-right-radius: 0;
+    .triangle {
+      transform: translate(-16px, 17px);
+    }
+    .circle {
+      transform: translate(-26px, 30px);
+    }
+  }
 
   .text {
     font-size: 16px;
@@ -120,16 +137,11 @@
   }
   .triangle {
     position: absolute;
-    top: 100%;
-    left: 50%;
-    transform: translateX(-50%);
     width: 20px;
   }
   .circle {
-    position: absolute;
-    top: calc(100% + 17px);
-    left: 50%;
-    transform: translateX(-50%);
+    top: 0;
+    left: 0;
     position: absolute;
   }
 }
