@@ -50,7 +50,7 @@ export function Row(props: IRowProps): JSX.Element {
     const res = columns.map(
       (column, ind): ICellProps => ({
         align: column.align,
-        columns: 1,
+        columns: column.type === 'text' && columns.length <= 2  ? 3 : 1,
         data: data[ind],
         type: column.type,
         columnHasPlus: props.columnHasPlus[ind],
