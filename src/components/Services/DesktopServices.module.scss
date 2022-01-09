@@ -1,0 +1,50 @@
+.wrapper {
+  padding: 36px 30px 120px;
+  max-width: 850px;
+  margin: 0 auto;
+  h2 {
+    text-align: center;
+    @media (min-width: 850px) {
+      text-align: left;
+    }
+  }
+  @media (min-width: 850px) {
+    padding-left: 0;
+    padding-right: 0;
+    &.isPinned {
+      padding-top: 176px;
+    }
+  }
+}
+
+.pinned {
+  height: 140px;
+  width: 100%;
+  background-color: #313131;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid transparent;
+  &.isPinned {
+    border-bottom: 1px solid #676767;
+    &:after {
+      display: block;
+      position: absolute;
+      top: calc(100% + 1px);
+      right: 0;
+      left: 0;
+      height: 82px;
+      content: "";
+      background: linear-gradient(180deg, #313131 0%, rgba(49, 49, 49, 0) 100%);
+    }
+  }
+}
+.header {
+  display: flex;
+  width: 850px;
+  gap: 200px;
+}
+
+.tableWrapper {
+  margin-top: 48px;
+}
