@@ -34,6 +34,7 @@ export function Cell(props: ICellProps): JSX.Element {
           plus={(props.data as ICurrencyValue).plus}
           currency={(props.data as ICurrencyValue).currency}
           columns={props.columns}
+          columnHasPlus={props.columnHasPlus}
           align={props.align}
         />
       </Match>

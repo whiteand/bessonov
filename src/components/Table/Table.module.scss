@@ -109,7 +109,7 @@
   border-radius: 10px;
   background: rgb(87, 87, 87);
   display: none;
-  &[data-show='true'] {
+  &[data-show="true"] {
     display: block;
   }
 
@@ -152,4 +152,7 @@
 .currency {
   font-family: "Roboto Mono", "Roboto", monospace;
   font-size: 16px;
+  &.padAbsentPlus {
+    padding-right: 10px;
+  }
 }

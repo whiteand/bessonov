@@ -6,6 +6,7 @@ import s from "./Table.module.scss";
 
 interface IRowProps {
   columns: readonly TColumn[];
+  columnHasPlus: readonly boolean[];
   data: readonly (string | ICurrencyValue)[];
   index: Accessor<number>;
 }
@@ -52,6 +53,7 @@ export function Row(props: IRowProps): JSX.Element {
         columns: 1,
         data: data[ind],
         type: column.type,
+        columnHasPlus: props.columnHasPlus[ind],
       })
     );
     mergeSameCells(res);

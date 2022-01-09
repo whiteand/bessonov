@@ -11,6 +11,7 @@ export function CurrencyCell(
   props: ICurrencyValue & {
     align: "left" | "right" | "middle";
     columns: number;
+    columnHasPlus?: boolean;
   }
 ) {
   return (
@@ -23,6 +24,7 @@ export function CurrencyCell(
         [s.left]: props.align === "left",
         [s.right]: props.align === "right",
         [s.middle]: props.align === "middle",
+        [s.padAbsentPlus]: !props.plus && props.columnHasPlus
       }}
     >
       <div>

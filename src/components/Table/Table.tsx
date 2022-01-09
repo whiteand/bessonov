@@ -1,8 +1,8 @@
-import { createEffect, createMemo, For, onMount, Show } from "solid-js";
-import { Row } from "./Row";
-import { TColumn, ICurrencyValue } from "./types";
-import s from "./Table.module.scss";
+import { createMemo, For, onMount, Show } from "solid-js";
 import { ColumnsHeaders } from "./ColumnsHeaders";
+import { Row } from "./Row";
+import s from "./Table.module.scss";
+import { ICurrencyValue, TColumn } from "./types";
 
 interface ITableProps {
   title: string;
@@ -17,9 +17,21 @@ export default function Table(props: ITableProps) {
   );
 
   onMount(() => {
-    const h = window.location.hash
-    if (!h) return
-  })
+    const h = window.location.hash;
+    if (!h) return;
+  });
+
+  const columnHasPlus = createMemo(() => {
+    return props.columns.map(
+      (column, ind) =>
+        column.type === "currency" &&
+        props.data.some((row) => {
+          const d = row[ind];
+          if (typeof d === "string") return false;
+          return d.plus || false;
+        })
+    );
+  });
 
   return (
     <div class={s.wrapper}>
@@ -34,7 +46,12 @@ export default function Table(props: ITableProps) {
         </Show>
         <For each={props.data}>
           {(row, index) => (
-            <Row columns={props.columns} data={row} index={index} />
+            <Row
+              columnHasPlus={columnHasPlus()}
+              columns={props.columns}
+              data={row}
+              index={index}
+            />
           )}
         </For>
       </div>
