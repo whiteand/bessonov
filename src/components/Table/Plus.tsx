@@ -67,7 +67,7 @@ function PlusWithButton() {
     }
   });
 
-  createRenderEffect(() => {
+  createEffect(() => {
     visible();
     const t = setTimeout(() => res()?.forceUpdate(), 0);
     onCleanup(() => clearTimeout(t))
