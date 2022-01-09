@@ -24,12 +24,12 @@ export function CurrencyCell(
         [s.left]: props.align === "left",
         [s.right]: props.align === "right",
         [s.middle]: props.align === "middle",
-        [s.padAbsentPlus]: !props.plus && props.columnHasPlus
+        [s.padAbsentPlus]: !props.plus && props.columnHasPlus,
       }}
     >
       <div>
-        {props.value}
-        {CURRENCY_LABEL[props.currency]}
+        <span class={s.value}>{props.value}</span>
+        <span class={s.currency}>{CURRENCY_LABEL[props.currency]}</span>
       </div>
       <Show when={props.plus}>
         <Plus />

@@ -154,4 +154,10 @@
   &.padAbsentPlus {
     padding-right: 10px;
   }
+  @media (min-width: 850px) {
+    .value,
+    .currency {
+      margin-right: 3px;
+    }
+  }
 }
