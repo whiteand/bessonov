@@ -89,14 +89,13 @@
 .plus {
   display: flex;
   position: relative;
-  align-items: center;
+  align-items: flex-start;
+  height: 100%;
   padding: 0;
+  padding-top: 0.25em;
   border: none;
   outline: none;
   color: #fff;
-  align-items: flex-start;
-  padding-top: 0.25em;
-  height: 100%;
   background: none;
   &:hover .popover {
     display: block;
