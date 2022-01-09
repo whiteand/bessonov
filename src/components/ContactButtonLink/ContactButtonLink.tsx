@@ -13,7 +13,7 @@ function scheduleLampBlim(cb: () => void): () => void {
 
 export default function ContactButtonLink(props: {
   children?: string;
-  preset?: "small" | 'default';
+  preset?: "small" | "default";
 }) {
   const [isDark, setIsDark] = createSignal(false);
   createEffect(() => {
@@ -48,7 +48,13 @@ export default function ContactButtonLink(props: {
       }}
       href={`tel:${contacts.phone}`}
     >
-      <img src={phone} classList={{ [s.dark]: isDark() }} width="29" height="35" />
+      <img
+        src={phone}
+        classList={{ [s.dark]: isDark() }}
+        width="29"
+        height="35"
+        alt="phone icon"
+      />
       <div>{text}</div>
     </a>
   );
