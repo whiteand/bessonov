@@ -1,3 +1,5 @@
+import { Modifier } from "@popperjs/core";
+import preventOverflow from "@popperjs/core/lib/modifiers/preventOverflow.js";
 import {
   createEffect,
   createRenderEffect,
@@ -8,12 +10,11 @@ import {
 } from "solid-js";
 import usePopper from "solid-popper";
 import { createIsMobile } from "../../packages/createIsMobile";
-import preventOverflow from "@popperjs/core/lib/modifiers/preventOverflow.js";
+import { isClickOutside } from "../../packages/isClickOutside";
 import ContactButtonLink from "../ContactButtonLink/ContactButtonLink";
 import circle from "./circle.svg";
 import s from "./Table.module.scss";
 import triangle from "./triangle.svg";
-import { Modifier } from "@popperjs/core";
 
 export function Plus(): JSX.Element {
   const isMobile = createIsMobile();
@@ -68,7 +69,21 @@ function PlusWithButton() {
 
   createRenderEffect(() => {
     visible();
-    res()?.forceUpdate();
+    const t = setTimeout(() => res()?.forceUpdate(), 0);
+    onCleanup(() => clearTimeout(t))
+  });
+
+  createEffect(() => {
+    if (!visible()) return;
+    const d = popper();
+    if (!d) return;
+    const handle = (e: MouseEvent) => {
+      if (isClickOutside(e, d)) {
+        setVisible(false);
+      }
+    };
+    document.body.addEventListener("click", handle);
+    onCleanup(() => document.body.removeEventListener("click", handle));
   });
 
   return (
