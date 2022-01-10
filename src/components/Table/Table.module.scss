@@ -9,15 +9,29 @@
   }
 }
 
+@mixin scrollPadding($paddingSize) {
+  margin-top: #{-$paddingSize};
+  padding-top: $paddingSize;
+}
+
 .header {
   font-weight: 500;
   font-size: 16px;
   line-height: 28px;
   letter-spacing: 0.15em;
   text-transform: uppercase;
+  transition: color 0.3s 0.5s ease-in-out;
+
+  &:global(.navigated) {
+    color: #ff7b42;
+  }
+
+  @include scrollPadding(50px);
+
   @media (min-width: 850px) {
     margin-right: 45px;
     flex-grow: 1;
+    @include scrollPadding(200px);
   }
 }
 

@@ -36,9 +36,9 @@ export default function Table(props: ITableProps) {
   return (
     <div class={s.wrapper}>
       <Show when={props.title}>
-        <h1 class={s.header} id={props.titleId}>
+        <h3 class={s.header} id={props.titleId}>
           {props.title}
-        </h1>
+        </h3>
       </Show>
       <div class={s.table}>
         <Show when={someColumnHasTitle()}>

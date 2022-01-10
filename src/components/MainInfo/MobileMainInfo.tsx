@@ -8,6 +8,22 @@ export default function MainInfo() {
     const [visible, setVisible] = createSignal(false);
     return { ...obj, visible, setVisible };
   });
+  const [highlightedId, setHighlightedId] = createSignal<string | null>(null);
+  createEffect(() => {
+    const id = highlightedId();
+    if (!id) return;
+    const element = document.getElementById(id);
+    if (!element) return;
+    element.classList.add("navigated");
+    const timeout = setTimeout(() => {
+      setHighlightedId(null);
+      element.classList.remove("navigated");
+    }, 1000);
+    onCleanup(() => {
+      clearTimeout(timeout);
+      element.classList.remove("navigated");
+    });
+  });
   createEffect(() => {
     function toggleNextLink() {
       for (const link of navLinks) {
@@ -44,6 +60,7 @@ export default function MainInfo() {
                 class={s.navlink}
                 classList={{ [s.visible]: navLink.visible() }}
                 href={`/#${navLink.headerId}`}
+                onClick={() => setHighlightedId(navLink.headerId)}
               >
                 {navLink.text}
               </a>
