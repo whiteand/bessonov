@@ -1,9 +1,9 @@
 [
- {"text": "Монтаж кабеля", "headerId": "" },
- {"text": "Устанавливаю подрозетники и распредкоробки, собираю их.", "headerId": "" },
- {"text": "Собираю електрощиток, устанавливаю розетки, выключатели, светильники.", "headerId": "" },
- {"text": "Выполняю слаботочные работы", "headerId": "" },
- {"text": "Провожу заземление", "headerId": "" },
- {"text": "Устраняю повреждения електросети", "headerId": "" },
- {"text": "Демонтирую проводку", "headerId": "" }
+ {"text": "Монтирую кабель", "headerId": "montazh-kabelia" },
+ {"text": "Устанавливаю подрозетники и распредкоробки, собираю их.", "headerId": "vyrezka-otverstiia-i-ustanovka-raspredkorobki-podrozetnika" },
+ {"text": "Собираю електрощиток, устанавливаю розетки, выключатели, светильники.", "headerId": "elektroshchitok-vnutrennii-vreznoi" },
+ {"text": "Выполняю слаботочные работы", "headerId": "montazh" },
+ {"text": "Провожу заземление", "headerId": "ustroistvo-kontura-zazemleniia" },
+ {"text": "Устраняю повреждения електросети", "headerId": "poisk-povrezhdenii-elektroprovodki-kabelia" },
+ {"text": "Демонтирую проводку", "headerId": "demontazh" }
 ]

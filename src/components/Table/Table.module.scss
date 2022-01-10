@@ -23,9 +23,9 @@
 
 .table {
   @media (min-width: 850px) {
-    max-width: 460px;
+    max-width: 360px;
     flex-grow: 0;
-    flex-basis: 460px;
+    flex-basis: 360px;
     flex-shrink: 0;
   }
 }

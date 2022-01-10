@@ -1,8 +1,10 @@
 import { Accessor, createMemo, For, JSX } from "solid-js";
+import { createIsMobile } from "../../packages/createIsMobile";
 import { Cell } from "./Cell";
+import { getColumnWidth } from "./getColumnWidth";
 import { ICellProps } from "./ICellProps";
-import { TColumn, ICurrencyValue } from "./types";
 import s from "./Table.module.scss";
+import { ICurrencyValue, TColumn } from "./types";
 
 interface IRowProps {
   columns: readonly TColumn[];
@@ -50,7 +52,7 @@ export function Row(props: IRowProps): JSX.Element {
     const res = columns.map(
       (column, ind): ICellProps => ({
         align: column.align,
-        columns: column.type === 'text' && columns.length <= 2  ? 3 : 1,
+        columns: getColumnWidth(column, columns.length),
         data: data[ind],
         type: column.type,
         columnHasPlus: props.columnHasPlus[ind],

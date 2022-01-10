@@ -3,7 +3,6 @@
     "type": "table",
     "title": "Монтаж Кабеля",
     "titleId": "montazh-kabelia",
-    "navlinkText": "Монтаж кабеля",
     "columns": [
       {
         "type": "text",
@@ -139,7 +138,6 @@
     "type": "table",
     "title": "Вырезка отверстия и установка распредкоробки, подрозетника",
     "titleId": "vyrezka-otverstiia-i-ustanovka-raspredkorobki-podrozetnika",
-    "navlinkText": "Устанавливаю подрозетники и распредкоробки, собираю их.",
     "columns": [
       {
         "type": "text",
@@ -188,7 +186,6 @@
   {
     "type": "table",
     "title": "Електрощиток внутренний / врезной",
-    "navlinkText": "Собираю електрощиток, устанавливаю розетки, выключатели, светильники.",
     "columns": [
       {
         "type": "text",

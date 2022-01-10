@@ -15,7 +15,10 @@ export function ColumnsHeaders(props: ITableHeaderProps): JSX.Element {
             fallback={<div class={`${s.empty} ${s.columnHeader}`} />}
             when={column.title}
           >
-            <ColumnHeader column={column} />
+            <ColumnHeader
+              column={column}
+              columnsLength={props.columns.length}
+            />
           </Show>
         )}
       </For>
