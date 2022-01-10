@@ -1,6 +1,7 @@
-import createRAF from "@solid-primitives/raf";
 import {
   Accessor,
+  createEffect,
+  createMemo,
   createRenderEffect,
   createSignal,
   onCleanup,
@@ -8,43 +9,50 @@ import {
 import { getElementOffsetTop } from "./getElementOffsetTop";
 
 export function usePinnedElement(
-  element: Accessor<HTMLElement | null | undefined>
+  getPinElement: Accessor<HTMLElement | null | undefined>
 ): [{ isPinned: Accessor<boolean> }] {
-  let pinned: HTMLElement | null | undefined = null;
-  const [originalY, setOriginalY] = createSignal(0);
-  createRenderEffect(() => {
-    let dom: HTMLElement | null | undefined = element();
-    if (!dom) return;
-    setOriginalY(getElementOffsetTop(dom));
-  });
-  const [isPinned, setIsPinned] = createSignal(false);
+  const [getPinnedElementOffsetY, setPinnedElementOffsetY] = createSignal(0);
 
-  const pin = () => {
-    const pinned = element();
-    if (!pinned) return;
-    const scrollY = document.documentElement.scrollTop;
-    const pinnedY = originalY();
-    if (scrollY <= pinnedY) {
-      if (isPinned()) {
-        pinned.style.position = "relative";
+  createRenderEffect(() => {
+    let dom: HTMLElement | null | undefined = getPinElement();
+    if (!dom) return;
+    setPinnedElementOffsetY(getElementOffsetTop(dom));
+  });
+
+  const [getIsPinned, setIsPinned] = createSignal(false);
+
+  const getScrollListener = createMemo(() => {
+    const offsetY = getPinnedElementOffsetY();
+    const pinElement = getPinElement();
+
+    if (!pinElement) return null;
+
+    if (getIsPinned()) {
+      return () => {
+        if (document.documentElement.scrollTop > offsetY) return;
         setIsPinned(false);
-      }
+      };
     } else {
-      if (!isPinned()) {
-        pinned.style.position = "fixed";
-        pinned.style.top = "0";
+      return () => {
+        if (document.documentElement.scrollTop <= offsetY) return;
         setIsPinned(true);
+      };
+    }
+  });
+
+  createEffect(() => {
+    const scrollListener = getScrollListener();
+    if (!scrollListener) return;
+    function handler() {
+      if (scrollListener) {
+        scrollListener();
       }
     }
-  };
-  const [_, start, stop] = createRAF(pin);
-
-  createRenderEffect(() => {
-    pinned = element();
-    if (!pinned) return;
-    start();
-    onCleanup(() => stop());
+    onCleanup(() => {
+      document.removeEventListener("scroll", handler);
+    });
+    document.addEventListener("scroll", handler);
   });
 
-  return [{ isPinned }];
+  return [{ isPinned: getIsPinned }];
 }
