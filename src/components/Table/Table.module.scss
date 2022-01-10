@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: flex-start;
 
-  @media (min-width: 850px) {
+  @media (min-width: 992px) {
     flex-direction: row;
     align-items: flex-start;
   }
@@ -28,7 +28,7 @@
 
   @include scrollPadding(50px);
 
-  @media (min-width: 850px) {
+  @media (min-width: 992px) {
     margin-right: 45px;
     flex-grow: 1;
     @include scrollPadding(200px);
@@ -36,7 +36,7 @@
 }
 
 .table {
-  @media (min-width: 850px) {
+  @media (min-width: 992px) {
     max-width: 360px;
     flex-grow: 0;
     flex-basis: 360px;
@@ -47,7 +47,7 @@
 .columnHeaders {
   display: flex;
   gap: 5px;
-  @media (min-width: 850px) {
+  @media (min-width: 992px) {
     gap: 25px;
   }
 }
@@ -76,7 +76,7 @@
     border-bottom: 1px solid #676767;
   }
   gap: 5px;
-  @media (min-width: 850px) {
+  @media (min-width: 992px) {
     gap: 25px;
   }
 }
@@ -168,7 +168,7 @@
   &.padAbsentPlus {
     padding-right: 10px;
   }
-  @media (min-width: 850px) {
+  @media (min-width: 992px) {
     .value,
     .currency {
       margin-right: 3px;

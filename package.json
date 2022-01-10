@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "@popperjs/core": "^2.11.2",
+    "@solid-primitives/media": "^1.1.10",
     "@solid-primitives/raf": "^1.0.7",
     "get-z-index": "^1.1.0",
     "solid-app-router": "^0.2.0",

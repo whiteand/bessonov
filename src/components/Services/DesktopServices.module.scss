@@ -1,19 +1,26 @@
+$containerWidth: 750px;
+
 .wrapper {
   padding: 36px 30px 120px;
-  max-width: 850px;
+  max-width: $containerWidth;
   margin: 0 auto;
   h2 {
     text-align: center;
-    @media (min-width: 850px) {
+    @media (min-width: 992px) {
       text-align: left;
     }
   }
-  @media (min-width: 850px) {
+  @media (min-width: 992px) {
     padding-left: 0;
     padding-right: 0;
+    margin: 30px;
     &.isPinned {
       padding-top: 176px;
     }
+  }
+
+  @media (min-width: 1280px) {
+    margin: 0 auto;
   }
 }
 
@@ -42,10 +49,11 @@
 }
 .header {
   display: flex;
-  width: 850px;
-  gap: 160px;
+  width: $containerWidth;
+  gap: 100px;
 }
 
 .tableWrapper {
   margin-top: 48px;
+  position: relative;
 }

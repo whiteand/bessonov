@@ -1,0 +1,15 @@
+.wrapper {
+  position: absolute;
+  left: calc(100% + 53px);
+  top: 0;
+  width: 214px;
+  p {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+
+    & ~ & {
+      margin-bottom: 1em;
+    }
+  }
+}

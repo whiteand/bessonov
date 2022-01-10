@@ -10,7 +10,7 @@
     margin-bottom: 15px;
   }
 
-  @media (min-width: 850px) {
+  @media (min-width: 992px) {
     flex-direction: row;
     align-items: flex-start;
     max-width: 685px;
@@ -18,7 +18,7 @@
 }
 
 .image {
-  @media (min-width: 850px) {
+  @media (min-width: 992px) {
     margin-right: 25px;
   }
 }

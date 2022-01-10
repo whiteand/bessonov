@@ -1,10 +1,12 @@
-import { createSignal, For, Match, Switch } from "solid-js";
+import { createSignal, For, Match, Show, Switch } from "solid-js";
 import services from "../../config/services.json";
 import ContactButtonLink from "../ContactButtonLink/ContactButtonLink";
 import Table from "../Table/Table";
 import { TColumn, TData } from "../Table/types";
 import s from "./DesktopServices.module.scss";
 import { usePinnedElement } from "../../packages/usePinnedElement";
+import PlusDescription from "./PlusDescription";
+import { getZIndex } from "../../utils/getZIndex";
 
 export default function DesktopServices() {
   const [pinnedElement, setPinnedElement] = createSignal<HTMLDivElement | null>(
@@ -17,6 +19,9 @@ export default function DesktopServices() {
       <div
         ref={setPinnedElement}
         class={s.pinned}
+        style={{
+          "z-index": getZIndex("pinned"),
+        }}
         classList={{
           [s.isPinned]: isPinned(),
         }}
@@ -33,10 +38,13 @@ export default function DesktopServices() {
         }}
       >
         <For each={services}>
-          {(service) => (
+          {(service, ind) => (
             <Switch>
               <Match when={service.type === "table"}>
                 <div class={s.tableWrapper}>
+                  <Show when={ind() <= 0}>
+                    <PlusDescription />
+                  </Show>
                   <Table
                     titleId={service.titleId}
                     title={service.title}
