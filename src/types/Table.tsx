@@ -16,3 +16,11 @@ export interface ICurrencyValue {
   readonly plus?: boolean;
   readonly value: number;
 }
+
+export interface ITable {
+  title: string;
+  titleId: string;
+  contactButtonText: string
+  columns: readonly TColumn[];
+  data: readonly (readonly (string | ICurrencyValue)[])[];
+}

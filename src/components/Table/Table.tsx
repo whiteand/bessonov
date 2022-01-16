@@ -1,14 +1,12 @@
 import { createMemo, For, onMount, Show } from "solid-js";
 import { ColumnsHeaders } from "./ColumnsHeaders";
+import { ITable } from "../../types/Table";
 import { Row } from "./Row";
 import s from "./Table.module.scss";
-import { ICurrencyValue, TColumn } from "./types";
 
-interface ITableProps {
-  title: string;
-  titleId: string;
-  columns: readonly TColumn[];
-  data: readonly (readonly (string | ICurrencyValue)[])[];
+interface ITableProps
+  extends Pick<ITable, "title" | "titleId" | "columns" | "data"> {
+  ref?: HTMLDivElement | ((element: HTMLDivElement) => void);
 }
 
 export default function Table(props: ITableProps) {
@@ -34,7 +32,7 @@ export default function Table(props: ITableProps) {
   });
 
   return (
-    <div class={s.wrapper}>
+    <div ref={props.ref} class={s.wrapper}>
       <Show when={props.title}>
         <h3 class={s.header} id={props.titleId}>
           {props.title}

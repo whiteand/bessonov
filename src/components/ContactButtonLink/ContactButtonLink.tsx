@@ -1,7 +1,14 @@
-import { createEffect, createSignal, JSX, onCleanup } from "solid-js";
+import {
+  createEffect,
+  createMemo,
+  createSignal,
+  onCleanup,
+  useContext,
+} from "solid-js";
 import phone from "../../assets/phone.svg";
 import contacts from "../../config/contacts.json";
 import { randomInt } from "../../packages/randomInt";
+import { CurrentTableContext } from "../CurrentTableContext/CurrentTableContext";
 import s from "./ContactButtonLink.module.scss";
 
 function scheduleLampBlim(cb: () => void): () => void {
@@ -38,7 +45,15 @@ export default function ContactButtonLink(props: {
     });
   });
 
-  const text = props.children || "Бесплатная консультация";
+  const text = createMemo(() => {
+    const children = props.children;
+    if (children) return children;
+    const currentTable = useContext(CurrentTableContext)[0]();
+    if (currentTable && currentTable.contactButtonText) {
+      return currentTable.contactButtonText;
+    }
+    return "Бесплатная консультация";
+  });
 
   return (
     <a
@@ -55,7 +70,7 @@ export default function ContactButtonLink(props: {
         height="35"
         alt="phone icon"
       />
-      <div>{text}</div>
+      <div>{text()}</div>
     </a>
   );
 }

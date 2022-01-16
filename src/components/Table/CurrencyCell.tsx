@@ -1,5 +1,5 @@
 import { Show } from "solid-js";
-import { ICurrencyValue, TCurrency } from "./types";
+import { ICurrencyValue, TCurrency } from "../../types/Table";
 import s from "./Table.module.scss";
 import { Plus } from "./Plus";
 

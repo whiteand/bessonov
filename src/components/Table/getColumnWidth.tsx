@@ -1,4 +1,4 @@
-import { TColumn } from "./types";
+import { TColumn } from "../../types/Table";
 
 export function getColumnWidth(column: TColumn, columnsAmount: number): number {
   if (column.type === "currency") {

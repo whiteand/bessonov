@@ -1,5 +1,5 @@
 import { JSX, Match, Switch } from "solid-js";
-import { ICurrencyValue } from "./types";
+import { ICurrencyValue } from "../../types/Table";
 import s from "./Table.module.scss";
 import { ICellProps } from "./ICellProps";
 import { TextCell } from "./TextCell";

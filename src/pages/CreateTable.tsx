@@ -12,7 +12,7 @@ import { createStore, produce } from "solid-js/store";
 import { transliterate } from "../packages/transliterate";
 import Table from "../components/Table/Table";
 import s from "./CreateTable.module.scss";
-import { ICurrencyValue } from "../components/Table/types";
+import { ICurrencyValue } from "../types/Table";
 
 /*
 {

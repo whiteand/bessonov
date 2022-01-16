@@ -1,7 +1,7 @@
 import { For, Match, Switch } from "solid-js";
 import services from "../../config/services.json";
 import Table from "../Table/Table";
-import { TColumn, TData } from "../Table/types";
+import { TColumn, TData } from "../../types/Table";
 import s from "./Services.module.scss";
 
 export default function MobileServices() {

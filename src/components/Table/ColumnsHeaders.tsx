@@ -1,5 +1,5 @@
 import { For, JSX, Show } from "solid-js";
-import { TColumn } from "./types";
+import { TColumn } from "../../types/Table";
 import s from "./Table.module.scss";
 import ColumnHeader from "./ColumnHeader";
 

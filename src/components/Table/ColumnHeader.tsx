@@ -1,4 +1,4 @@
-import { TColumn } from "./types";
+import { TColumn } from "../../types/Table";
 import s from "./Table.module.scss";
 import { getColumnWidth } from "./getColumnWidth";
 

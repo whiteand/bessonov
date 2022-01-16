@@ -3,6 +3,7 @@
     "type": "table",
     "title": "Монтаж Кабеля",
     "titleId": "montazh-kabelia",
+    "contactButtonText": "Заказать монтаж кабеля",
     "columns": [
       {
         "type": "text",
@@ -61,6 +62,7 @@
   {
     "type": "table",
     "title": "Штробление Стены",
+    "contactButtonText": "Заказать штробление",
     "titleId": "shtroblenie-steny",
     "columns": [
       {
@@ -137,6 +139,7 @@
   {
     "type": "table",
     "title": "Вырезка отверстия и установка распредкоробки, подрозетника",
+    "contactButtonText": "Заказать установку распредкоробки",
     "titleId": "vyrezka-otverstiia-i-ustanovka-raspredkorobki-podrozetnika",
     "columns": [
       {
@@ -186,6 +189,7 @@
   {
     "type": "table",
     "title": "Електрощиток внутренний / врезной",
+    "contactButtonText": "Заказать устновку електрощитка",
     "columns": [
       {
         "type": "text",
@@ -237,6 +241,7 @@
   {
     "type": "table",
     "title": "Устройство ниши",
+    "contactButtonText": "Заказать устройство ниши",
     "columns": [
       {
         "type": "text",
@@ -272,6 +277,7 @@
   {
     "type": "table",
     "title": "Щиток внешний / накладной",
+    "contactButtonText": "Заказать установку щитка",
     "columns": [
       {
         "type": "text",
@@ -323,6 +329,7 @@
   {
     "type": "table",
     "title": "Сборка распредкоробки",
+    "contactButtonText": "Заказать сборку распредкоробки",
     "columns": [
       {
         "type": "text",
@@ -350,6 +357,7 @@
   {
     "type": "table",
     "title": "Монтаж и подключение светильников",
+    "contactButtonText": "Заказать монтаж светильников",
     "columns": [
       {
         "type": "text",
@@ -433,6 +441,7 @@
   {
     "type": "table",
     "title": "Поиск повреждений электропроводки, кабеля",
+    "contactButtonText": "Заказать поиск повреждений",
     "columns": [
       {
         "type": "text",
@@ -484,6 +493,7 @@
   {
     "type": "table",
     "title": "Устройство контура заземления",
+    "contactButtonText": "Заказать устройство контура",
     "columns": [
       {
         "type": "text",
@@ -511,6 +521,7 @@
   {
     "type": "table",
     "title": "Демонтаж",
+    "contactButtonText": "Заказать демонтаж",
     "columns": [
       {
         "type": "text",
@@ -554,6 +565,7 @@
   {
     "type": "table",
     "title": "Монтаж",
+    "contactButtonText": "Заказать монтаж",
     "columns": [
       {
         "type": "text",
@@ -645,6 +657,7 @@
   {
     "type": "table",
     "title": "Консультации",
+    "contactButtonText": "Заказать консультацию",
     "columns": [
       {
         "type": "text",
@@ -672,6 +685,7 @@
   {
     "type": "table",
     "title": "Составление сметы работ и материалов",
+    "contactButtonText": "Заказать смету",
     "columns": [
       {
         "type": "text",
@@ -699,6 +713,7 @@
   {
     "type": "table",
     "title": "Закупка материалов",
+    "contactButtonText": "Заказать закупку материалов",
     "columns": [
       {
         "type": "text",
@@ -726,6 +741,7 @@
   {
     "type": "table",
     "title": "Коефициент сложности",
+    "contactButtonText": "Бесплатная консультация",
     "columns": [
       {
         "type": "text",

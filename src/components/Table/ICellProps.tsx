@@ -1,4 +1,4 @@
-import { ICurrencyValue } from "./types";
+import { ICurrencyValue } from "../../types/Table";
 
 export interface ICellProps {
   data: string | ICurrencyValue;

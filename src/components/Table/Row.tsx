@@ -4,7 +4,7 @@ import { Cell } from "./Cell";
 import { getColumnWidth } from "./getColumnWidth";
 import { ICellProps } from "./ICellProps";
 import s from "./Table.module.scss";
-import { ICurrencyValue, TColumn } from "./types";
+import { ICurrencyValue, TColumn } from "../../types/Table";
 
 interface IRowProps {
   columns: readonly TColumn[];
