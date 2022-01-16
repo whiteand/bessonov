@@ -7,7 +7,7 @@ import { useSyncCurrentTableWithContext } from "./useSyncCurrentTableWithContext
 
 export default function MobileServices() {
   const tableElements = useSyncCurrentTableWithContext({
-    rootMargin: '-25% 0px'
+    rootMargin: '0px'
   });
   return (
     <div class={s.wrapper}>
