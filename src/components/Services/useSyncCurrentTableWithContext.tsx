@@ -20,16 +20,16 @@ export function useSyncCurrentTableWithContext(config: {
     for (const titleId of titleIds) {
       const item = tableElements[titleId];
       if (typeof item !== "object") continue;
-      add(item, (element) => {
-        console.log(titleId, element.isIntersecting);
-        if (element.isIntersecting) {
-          const table = services.find((table) => table.titleId === titleId) as
-            | ITable
-            | undefined;
-          if (table) {
-            setCurrentTable(table);
-          }
-        }
+      add(item, (entry) => {
+        if (!entry.isIntersecting) return;
+        
+        const table = services.find((table) => table.titleId === titleId) as
+          | ITable
+          | undefined;
+
+        if (!table) return;
+
+        setCurrentTable(table);
       });
     }
     onCleanup(() => {
