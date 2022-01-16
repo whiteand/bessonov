@@ -6,7 +6,9 @@ import s from "./Services.module.scss";
 import { useSyncCurrentTableWithContext } from "./useSyncCurrentTableWithContext";
 
 export default function MobileServices() {
-  const tableElements = useSyncCurrentTableWithContext();
+  const tableElements = useSyncCurrentTableWithContext({
+    rootMargin: '-25% 0px'
+  });
   return (
     <div class={s.wrapper}>
       <h2>Услуги</h2>

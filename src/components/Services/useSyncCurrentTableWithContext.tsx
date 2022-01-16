@@ -5,13 +5,13 @@ import { doNothing } from "../../packages/doNothing";
 import { ITable } from "../../types/Table";
 import { CurrentTableContext } from "../CurrentTableContext/CurrentTableContext";
 
-export function useSyncCurrentTableWithContext(): Record<
-  string,
-  HTMLDivElement
-> {
+export function useSyncCurrentTableWithContext(config: {
+  rootMargin: string;
+}): Record<string, HTMLDivElement> {
   const tableElements: Record<string, HTMLDivElement> = {};
   const [add, { remove }] = createViewportObserver([], doNothing, {
     threshold: [1],
+    rootMargin: config.rootMargin,
   });
 
   createEffect(() => {

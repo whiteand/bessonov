@@ -17,7 +17,9 @@ export default function DesktopServices() {
   const [{ isPinned }] = usePinnedElement(pinnedElement);
 
   const tableElements: Record<string, HTMLDivElement> =
-    useSyncCurrentTableWithContext();
+    useSyncCurrentTableWithContext({
+      rootMargin: "-25% 0px",
+    });
 
   return (
     <>

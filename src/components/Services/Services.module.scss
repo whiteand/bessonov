@@ -1,12 +1,15 @@
 .wrapper {
+  max-width: 360px;
   padding: 36px 30px 120px;
-  max-width: 850px;
   margin: 0 auto;
   h2 {
     text-align: center;
     @media (min-width: 992px) {
       text-align: left;
     }
+  }
+  @media (min-width: 850px) {
+    max-width: 850px;
   }
 }
 
