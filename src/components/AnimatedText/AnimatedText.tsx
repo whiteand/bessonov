@@ -57,21 +57,43 @@ export function AnimatedText(props: { children: string }) {
     if (!ctx) return;
 
     ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.save();
+    ctx.scale(2, 2);
     ctx.fillStyle = "#fff";
     ctx.font = '16px "Roboto"';
-    let font = 16;
-    while (font > 0 && ctx.measureText(newText)?.width > 270) {
-      font-=0.5;
-      ctx.font = `${font}px "Roboto"`;
+    const font = getNecessaryFontSize(ctx, newText);
+    if (!font) {
+      ctx.restore();
+      return;
     }
-    if (!font) return
     ctx.textBaseline = "middle";
-    ctx.fillText(newText, 0, canvas.height / 2 + 2);
+    ctx.fillText(newText, 0, 17);
+    ctx.restore();
   });
+
+  const width = 270;
+  const height = 30;
 
   return (
     <Show when={initialised()} fallback={props.children}>
-      <canvas ref={canvas} width="270" height="30" />
+      <canvas
+        ref={canvas}
+        width={width * 2}
+        height={height * 2}
+        style={{
+          width: `${width}px`,
+          height: `${height}px`,
+        }}
+      />
     </Show>
   );
 }
+function getNecessaryFontSize(ctx: CanvasRenderingContext2D, newText: string) {
+  let font = 16;
+  while (font > 0 && ctx.measureText(newText)?.width > 270) {
+    font -= 0.5;
+    ctx.font = `${font}px "Roboto"`;
+  }
+  return font;
+}
+
