@@ -8,6 +8,7 @@ import {
 import phone from "../../assets/phone.svg";
 import contacts from "../../config/contacts.json";
 import { randomInt } from "../../packages/randomInt";
+import { AnimatedText } from "../AnimatedText/AnimatedText";
 import { CurrentTableContext } from "../CurrentTableContext/CurrentTableContext";
 import s from "./ContactButtonLink.module.scss";
 
@@ -70,7 +71,9 @@ export default function ContactButtonLink(props: {
         height="35"
         alt="phone icon"
       />
-      <div>{text()}</div>
+      <div>
+        <AnimatedText>{text()}</AnimatedText>
+      </div>
     </a>
   );
 }

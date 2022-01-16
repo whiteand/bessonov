@@ -20,4 +20,8 @@
     font-size: 17.5px;
     line-height: 21px;
   }
+  @media (min-width: 850px) {
+    max-width: 460px;
+    min-width: 360px;
+  }
 }
