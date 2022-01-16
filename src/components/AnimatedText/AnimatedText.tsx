@@ -1,13 +1,20 @@
-import { createEffect, createSignal, onCleanup } from "solid-js";
+import { createEffect, createSignal, onCleanup, untrack } from "solid-js";
 
 export function AnimatedText(props: { children: string }) {
   const [lastText, setLastText] = createSignal(props.children || "");
 
   createEffect(() => {
     const newText = props.children;
-    const oldText = lastText();
+    const oldText = untrack(lastText);
+
     if (oldText === newText) return;
-    const timeout = setTimeout(() => {
+
+    const interval = setInterval(() => {
+      const oldText = untrack(lastText);
+      if (newText === oldText) {
+        clearInterval(interval);
+        return;
+      }
       if (newText.startsWith(oldText)) {
         setLastText(newText.slice(0, oldText.length + 1));
         return;
@@ -16,8 +23,8 @@ export function AnimatedText(props: { children: string }) {
     }, 20);
 
     onCleanup(() => {
-      if (timeout) {
-        clearTimeout(timeout);
+      if (interval) {
+        clearInterval(interval);
       }
     });
   });
