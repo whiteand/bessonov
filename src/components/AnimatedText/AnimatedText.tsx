@@ -9,7 +9,7 @@ export function AnimatedText(props: { children: string }) {
 
     if (oldText === newText) return;
 
-    const interval = setInterval(() => {
+    const tick = () => {
       const oldText = untrack(lastText);
       if (newText === oldText) {
         clearInterval(interval);
@@ -20,7 +20,11 @@ export function AnimatedText(props: { children: string }) {
         return;
       }
       setLastText((text) => text.slice(0, -1));
-    }, 20);
+    };
+
+    const interval = setInterval(tick, 20);
+
+    tick();
 
     onCleanup(() => {
       if (interval) {
