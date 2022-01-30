@@ -24,7 +24,7 @@ export function AnimatedText(props: { children: string }) {
       setLastText((text) => text.slice(0, -1));
     };
 
-    const interval = setInterval(tick, 30);
+    const interval = setInterval(tick, 15);
 
     tick();
 
