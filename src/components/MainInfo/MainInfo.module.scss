@@ -68,10 +68,13 @@
       background-color: #fff;
       box-shadow: 0px 0px 8px #ff7b42, 0px 0px 8px #ff7b42, 0px 0px 8px #ff7b42;
     }
-    color: #cecece;
     &:hover {
       cursor: pointer;
       color: white;
+    }
+    color: white;
+    @media (min-width: 768px) {
+      color: #cecece;
     }
   }
 }
