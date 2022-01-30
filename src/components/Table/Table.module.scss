@@ -127,23 +127,11 @@
   padding: 10px 10px;
   border-radius: 10px;
   background: rgb(87, 87, 87);
-  display: none;
-  &[data-show="true"] {
-    display: block;
-  }
-
-  &[data-popper-placement^="top-start"] {
-    border-bottom-left-radius: 0;
-    .triangle {
-      transform: translate(-4px, 9px);
-    }
-  }
-  &[data-popper-placement^="top-end"] {
-    border-bottom-right-radius: 0;
-    .triangle {
-      transform: translate(-16px, 9px);
-    }
-  }
+  display: flex;
+  position: absolute;
+  top: -20px;
+  left: 0;
+  transform: translate(-50%, -100%);
 
   .text {
     font-size: 16px;
@@ -152,6 +140,9 @@
   }
   .triangle {
     position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, 0);
     width: 20px;
   }
 }
