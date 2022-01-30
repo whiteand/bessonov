@@ -1,6 +1,6 @@
 import { createEffect, createSignal, For, onCleanup, untrack } from "solid-js";
 import navigation from "../../config/navigation.json";
-import png from "../../assets/portrait.png";
+import png from "../../assets/portrait.jpg";
 import s from "./MainInfo.module.scss";
 
 export default function MainInfo() {
