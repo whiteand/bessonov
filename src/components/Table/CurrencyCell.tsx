@@ -32,7 +32,7 @@ export function CurrencyCell(
         <span class={s.currency}>{CURRENCY_LABEL[props.currency]}</span>
       </div>
       <Show when={props.plus}>
-        <Plus />
+        <Plus withTooltip={props.withTooltip} />
       </Show>
     </div>
   );

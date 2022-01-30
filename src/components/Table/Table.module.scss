@@ -116,9 +116,15 @@
   }
 }
 
+.circle {
+  position: absolute;
+  top: -10px;
+  left: -20px;
+}
+
 .popover {
   width: 249px;
-  padding: 17px 10px;
+  padding: 10px 10px;
   border-radius: 10px;
   background: rgb(87, 87, 87);
   display: none;
@@ -129,19 +135,13 @@
   &[data-popper-placement^="top-start"] {
     border-bottom-left-radius: 0;
     .triangle {
-      transform: translate(-4px, 17px);
-    }
-    .circle {
-      transform: translate(-14px, 30px);
+      transform: translate(-4px, 9px);
     }
   }
   &[data-popper-placement^="top-end"] {
     border-bottom-right-radius: 0;
     .triangle {
-      transform: translate(-16px, 17px);
-    }
-    .circle {
-      transform: translate(-26px, 30px);
+      transform: translate(-16px, 9px);
     }
   }
 
@@ -149,16 +149,10 @@
     font-size: 16px;
     text-align: left;
     line-height: 19px;
-    margin-bottom: 19px;
   }
   .triangle {
     position: absolute;
     width: 20px;
-  }
-  .circle {
-    top: 0;
-    left: 0;
-    position: absolute;
   }
 }
 
@@ -168,10 +162,8 @@
   &.padAbsentPlus {
     padding-right: 10px;
   }
-  @media (min-width: 992px) {
-    .value,
-    .currency {
-      margin-right: 3px;
-    }
+  .value,
+  .currency {
+    margin-right: 3px;
   }
 }

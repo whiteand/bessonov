@@ -14,6 +14,7 @@ export type TCurrency = "UAH";
 export interface ICurrencyValue {
   readonly currency: TCurrency;
   readonly plus?: boolean;
+  readonly withTooltip?: boolean
   readonly value: number;
 }
 

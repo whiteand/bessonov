@@ -33,6 +33,7 @@ export function Cell(props: ICellProps): JSX.Element {
           value={(props.data as ICurrencyValue).value}
           plus={(props.data as ICurrencyValue).plus}
           currency={(props.data as ICurrencyValue).currency}
+          withTooltip={(props.data as ICurrencyValue).withTooltip}
           columns={props.columns}
           columnHasPlus={props.columnHasPlus}
           align={props.align}

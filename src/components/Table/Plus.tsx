@@ -1,26 +1,18 @@
 import { Modifier } from "@popperjs/core";
 import preventOverflow from "@popperjs/core/lib/modifiers/preventOverflow.js";
-import {
-  createEffect,
-  createRenderEffect,
-  createSignal,
-  JSX,
-  onCleanup,
-  Show,
-} from "solid-js";
+import { createEffect, createSignal, JSX, onCleanup, Show } from "solid-js";
 import usePopper from "solid-popper";
 import { createIsMobile } from "../../packages/createIsMobile";
 import { isClickOutside } from "../../packages/isClickOutside";
-import ContactButtonLink from "../ContactButtonLink/ContactButtonLink";
 import circle from "./circle.svg";
 import s from "./Table.module.scss";
 import triangle from "./triangle.svg";
 
-export function Plus(): JSX.Element {
+export function Plus(props: { withTooltip?: boolean }): JSX.Element {
   const isMobile = createIsMobile();
 
   return (
-    <Show when={isMobile()} fallback={<>+</>}>
+    <Show when={isMobile() && props.withTooltip} fallback={<>+</>}>
       <PlusWithButton />
     </Show>
   );
@@ -52,7 +44,7 @@ function PlusWithButton() {
       {
         name: "offset",
         options: {
-          offset: [0, 23],
+          offset: [0, 4],
         },
       },
     ],
@@ -69,9 +61,9 @@ function PlusWithButton() {
 
   createEffect(() => {
     visible();
-    res()?.forceUpdate()
+    res()?.forceUpdate();
     const t = setTimeout(() => res()?.forceUpdate(), 0);
-    onCleanup(() => clearTimeout(t))
+    onCleanup(() => clearTimeout(t));
   });
 
   createEffect(() => {
@@ -90,19 +82,17 @@ function PlusWithButton() {
   return (
     <>
       <button
-        ref={setAnchor}
         type="button"
         class={s.plus}
         onClick={() => setVisible((visible) => !visible)}
       >
         +
+        <img ref={setAnchor} class={s.circle} src={circle} />
       </button>
       <div ref={setPopper} class={s.popover} data-show={visible()}>
         <div class={s.text}>Со значком «+» указана минимальная стоимость</div>
-        <ContactButtonLink preset="small">Узнать точную цену</ContactButtonLink>
         <div data-popper-arrow>
           <img width="20" class={s.triangle} src={triangle} data-popper-arrow />
-          <img class={s.circle} src={circle} />
         </div>
       </div>
     </>
