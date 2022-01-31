@@ -7,5 +7,5 @@ export default defineConfig({
     target: 'esnext',
     polyfillDynamicImport: false,
   },
-  publicDir: '<root>/public'
+  publicDir: '<root>/src/public'
 })
