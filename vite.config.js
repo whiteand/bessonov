@@ -7,7 +7,4 @@ export default defineConfig({
     target: 'esnext',
     polyfillDynamicImport: false,
   },
-  assetsInclude: [
-    '<root>/src/assets/og-image.png'
-  ],
 })
