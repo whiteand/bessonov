@@ -50,7 +50,7 @@ export default function MainInfo() {
       />
       <div>
         <h1>
-          <span class={s.electro}>Електрик</span>
+          <span class={s.electro}>Электрик</span>
           <span class={s.name}>Влад Бессонов</span>
         </h1>
         <nav class={s.nav}>
