@@ -8,11 +8,15 @@
   max-width: 360px;
   background: rgba(49, 49, 49, 1);
   box-shadow: 0 0 10px rgba(49, 49, 49, 1);
-  transform: translateX(-50%);
+  transform: translate(-50%, 0);
+  transition: transform 0.5s ease-out;
   a {
     width: 100%;
   }
   @media (min-width: 992px) {
     display: none;
+  }
+  &.copyrightVisible {
+    transform: translate(-50%, -32px);
   }
 }
