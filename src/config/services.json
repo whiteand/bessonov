@@ -293,6 +293,42 @@
     ],
     "data": [
       [
+        "до 12 модулей",
+        {
+          "currency": "UAH",
+          "value": 180,
+          "plus": false
+        }
+      ],
+      [
+        "от 12 модулей",
+        {
+          "currency": "UAH",
+          "value": 200,
+          "plus": true
+        }
+      ]
+    ],
+    "titleId": "shchitok-vneshnii-nakladnoi"
+  },
+  {
+    "type": "table",
+    "title": "Монтаж автоматики и комутационной аппаратуры",
+    "contactButtonText": "Заказать установку автоматики",
+    "columns": [
+      {
+        "type": "text",
+        "align": "left",
+        "title": ""
+      },
+      {
+        "type": "currency",
+        "align": "right",
+        "title": ""
+      }
+    ],
+    "data": [
+      [
         "1-фазный счётчик",
         {
           "currency": "UAH",
@@ -304,12 +340,12 @@
         "3-фазный",
         {
           "currency": "UAH",
-          "value": 350,
+          "value": 400,
           "plus": true
         }
       ],
       [
-        "1-фазный автомат",
+        "1 мод. автомат",
         {
           "currency": "UAH",
           "value": 70,
@@ -317,15 +353,39 @@
         }
       ],
       [
-        "силовой выключатель УЗО",
+        "1-фазный выключатель УЗО, ДИФ",
         {
           "currency": "UAH",
           "value": 150,
           "plus": true
         }
+      ],
+      [
+        "3-фазный выключатель УЗО, ДИФ",
+        {
+          "currency": "UAH",
+          "value": 350,
+          "plus": true
+        }
+      ],
+      [
+        "3-фазное реле нарпяжения",
+        {
+          "currency": "UAH",
+          "value": 180,
+          "plus": true
+        }
+      ],
+      [
+        "3-фазное реле нарпяжения",
+        {
+          "currency": "UAH",
+          "value": 400,
+          "plus": true
+        }
       ]
     ],
-    "titleId": "shchitok-vneshnii-nakladnoi"
+    "titleId": "montazh-automatiki-i-kommutacionnoi-apparaturi"
   },
   {
     "type": "table",
@@ -450,43 +510,15 @@
         "title": ""
       },
       {
-        "type": "currency",
+        "type": "text",
         "align": "right",
         "title": ""
       }
     ],
     "data": [
       [
-        "прозвонка",
-        {
-          "currency": "UAH",
-          "value": 50,
-          "plus": false
-        }
-      ],
-      [
-        "диагностика средней сложности",
-        {
-          "currency": "UAH",
-          "value": 200,
-          "plus": true
-        }
-      ],
-      [
-        "высокой сложности (до 3ч.)",
-        {
-          "currency": "UAH",
-          "value": 300,
-          "plus": true
-        }
-      ],
-      [
-        "Вызов на 3 часа +",
-        {
-          "currency": "UAH",
-          "value": 120,
-          "plus": true
-        }
+        "прозвонка и поиск повреждений",
+        "200 ₴ / час"
       ]
     ],
     "titleId": "poisk-povrezhdenii-elektroprovodki-kabelia"
@@ -512,8 +544,8 @@
         "комплекс работ",
         {
           "currency": "UAH",
-          "value": 3500,
-          "plus": false
+          "value": 4000,
+          "plus": true
         }
       ]
     ],
@@ -649,6 +681,14 @@
         {
           "currency": "UAH",
           "value": 170,
+          "plus": true
+        }
+      ],
+      [
+        "монтаж короба пластикового м.п.",
+        {
+          "currency": "UAH",
+          "value": 30,
           "plus": true
         }
       ]
