@@ -1,3 +1,4 @@
+import createClipboard from "@solid-primitives/clipboard";
 import {
   createEffect,
   createMemo,
@@ -7,12 +8,12 @@ import {
   onMount,
   Show,
 } from "solid-js";
-import { ColumnsHeaders } from "./ColumnsHeaders";
-import LinkSvg, * as T from "../../assets/link.svg";
+import LinkSvg from "../../assets/link.svg";
+import { createIsMobile } from "../../packages/createIsMobile";
 import { ITable } from "../../types/Table";
+import { ColumnsHeaders } from "./ColumnsHeaders";
 import { Row } from "./Row";
 import s from "./Table.module.scss";
-import createClipboard from "@solid-primitives/clipboard";
 
 interface ITableProps
   extends Pick<ITable, "title" | "titleId" | "columns" | "data"> {
@@ -49,7 +50,10 @@ export default function Table(props: ITableProps) {
 
   let tableHeader: HTMLDivElement | undefined;
 
+  const isMobile = createIsMobile();
+
   createEffect(() => {
+    if (!isMobile()) return;
     if (!tableHeader) return;
     if (typeof navigator.share !== "function") return;
     if (
