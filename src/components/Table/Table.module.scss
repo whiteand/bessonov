@@ -55,10 +55,11 @@ $clickAnimationScale: 1.1;
   .copyButton {
     display: none;
   }
-
+  .headerText {
+    pointer-events: all;
+  }
   @media (min-width: 992px) {
     .headerText {
-      pointer-events: all;
       margin-left: -20px;
       padding-left: 20px;
     }

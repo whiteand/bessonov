@@ -24,6 +24,12 @@ export default function Table(props: ITableProps) {
     props.columns.some((column) => column.title)
   );
 
+  const titleUrl = createMemo(() => {
+    const url = new URL(`/`, window.location.origin);
+    url.hash = props.titleId;
+    return url.toString();
+  });
+
   onMount(() => {
     const h = window.location.hash;
     if (!h) return;
@@ -41,14 +47,38 @@ export default function Table(props: ITableProps) {
     );
   });
 
+  let tableHeader: HTMLDivElement | undefined;
+
+  createEffect(() => {
+    if (!tableHeader) return;
+    if (typeof navigator.share !== "function") return;
+    if (
+      typeof navigator.canShare === "function" &&
+      !navigator.canShare({ url: titleUrl() })
+    )
+      return;
+
+    const dom = tableHeader;
+
+    function commit() {
+      navigator.share({
+        url: titleUrl(),
+      });
+    }
+
+    dom.addEventListener("click", commit);
+
+    onCleanup(() => {
+      dom.removeEventListener("click", commit);
+    });
+  });
+
   const [setClipboard] = createClipboard();
   const [copied, setCopied] = createSignal(false);
 
   const onHeaderLinkButtonClick = () => {
-    const url = new URL(`/`, window.location.origin);
-    url.hash = props.titleId;
-    window.history.replaceState(null, document.title, url.toString());
-    setClipboard(url.toString());
+    window.history.replaceState(null, document.title, titleUrl());
+    setClipboard(titleUrl());
     setCopied(false);
     setCopied(true);
   };
@@ -65,7 +95,7 @@ export default function Table(props: ITableProps) {
     <div ref={props.ref} class={s.wrapper}>
       <Show when={props.title}>
         <h3 class={s.header} id={props.titleId}>
-          <div class={s.headerText}>
+          <div class={s.headerText} ref={tableHeader}>
             <button
               class={s.copyButton}
               classList={{
