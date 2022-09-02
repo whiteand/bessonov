@@ -182,7 +182,7 @@
         {
           "currency": "UAH",
           "plus": true,
-          "value": 60
+          "value": 100
         }
       ]
     ]
@@ -301,10 +301,18 @@
         }
       ],
       [
-        "от 12 модулей",
+        "от 12-36 модулей",
         {
           "currency": "UAH",
-          "value": 200,
+          "value": 250,
+          "plus": true
+        }
+      ],
+      [
+        "от 48-72 модулей",
+        {
+          "currency": "UAH",
+          "value": 450,
           "plus": true
         }
       ]
